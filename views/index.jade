@@ -24,7 +24,7 @@ block content
           span.message-time #{format(message.timestamp)}
         else
           span.message-time Unknown
-        if user&&( user.username==message.sender ||user.admin)
+        if user&&user.member&&( user.username==message.sender ||user.admin)
           a(href="/#{message._id}/delete").message-delete delete
     if !all
       a.view-all(href="/all") view all messages
