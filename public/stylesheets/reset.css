@@ -146,15 +146,18 @@ a {
     display: flex;
     gap: 1rem;
 }
-.header-nav * {
+.header-nav a {
     padding-right: 1rem;
     border-right: 3px solid floralwhite;
+}
+.header-nav span a {
+    display: inline;
 }
 .header-nav :last-child {
     padding-right: 0;
     border-right: none;
 }
-.home-anchor {
+a.home-anchor {
     margin-right: auto;
     border: none;
 }

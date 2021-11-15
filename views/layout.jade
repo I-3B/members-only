@@ -16,7 +16,9 @@ html
             a(href="/admin") Become an admin
           else if !user.member
             a(href="/member") Become a member
-          a(href="/logout") #{user.username}(#{user.type}) Log out
+          span
+            | #{user.username}(#{user.type})
+            a(href="/logout") Log out
         else
           a(href="/login") Log In
           a(href="/signup") Sign Up
