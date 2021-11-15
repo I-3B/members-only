@@ -1,0 +1,4 @@
+.env
+mongodb.sh
+.vscode/
+node_modules/

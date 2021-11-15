@@ -1,0 +1,105 @@
+.messages {
+    max-width: 80%;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 8%;
+}
+.message {
+    background-color: rgb(49, 49, 49);
+    box-shadow: -3px 3px 5px rgb(0, 0, 0);
+    flex-basis: min-content;
+    font-size: 2rem;
+    border-radius: 6px;
+    padding: 1rem;
+    position: relative;
+}
+.pinned {
+    background-color: rgb(211, 67, 0);
+}
+.pinned a {
+    color: #0066ff;
+    text-decoration: underline;
+    display: inline;
+}
+.pinned span {
+    cursor: default;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #b700ff;
+}
+.message-content {
+    word-wrap: break-word;
+    margin: 1rem auto 3rem;
+}
+.message-time {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+.message-delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgba(255, 250, 240, 0.582);
+}
+.message-delete:hover {
+    text-decoration: underline;
+    color: floralwhite;
+}
+.new-message {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+.new-message input {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.new-message input[type="submit"] {
+    background-color: #ffc500;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/send.png");
+    color: floralwhite;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    transition: 0.4s background-color;
+    cursor: pointer;
+}
+.new-message input[type="submit"]:focus,
+.new-message input[type="submit"]:hover {
+    background-color: orangered;
+}
+.new-message input[type="text"] {
+    flex: 1;
+    padding: 0 1rem;
+    border-radius: 25px;
+    border: none;
+    outline: 3px solid #ffc500;
+}
+
+.new-message input[type="text"]:focus {
+    outline-color: orangered;
+}
+.view-all {
+    padding: 1rem 2rem;
+    width: fit-content;
+    margin: auto;
+    background-color: #ffc400d7;
+    border-radius: 25px;
+    transition: 0.3s background-color;
+}
+.view-all:hover,
+.view-all:focus {
+    background-color: #ffc500;
+}

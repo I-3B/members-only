@@ -1,0 +1,19 @@
+extends layout
+block style
+  link(rel="stylesheet", href="stylesheets/form.css")
+block content
+  if user
+    p You already logged in.
+  else
+    form(action="/login",method="POST")
+      h3 Log In
+      label(for="username") Username:
+      input(id="username",name="username",value=username,required)
+      label(for="password") Password:
+      input(id="password",name="password",type="password",required)
+      if error.length!==0
+        p #{error}
+      input(value="Log In", type="submit")
+      p.already-have
+        | don't have an account?&nbsp
+        a(href="/signup") Sign up

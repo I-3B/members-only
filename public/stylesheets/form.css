@@ -1,0 +1,73 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    background-color: #ffc500;
+    border-radius: 5px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    gap: 0.5rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+
+label {
+    margin-top: 1rem;
+}
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem;
+}
+input[type="submit"] {
+    cursor: pointer;
+    margin-top: 1rem;
+    border: none;
+    color: floralwhite;
+    background-color: #ffc500;
+    border: 2px solid floralwhite;
+    font-size: 2rem;
+    padding: 0.3rem;
+    transition: color 0.4s, background-color 0.4s;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    border: 2px solid transparent;
+    color: #ffc500;
+    background-color: floralwhite;
+}
+ul {
+    list-style: disc;
+}
+li,
+p {
+    font-weight: bold;
+    color: tomato;
+    font-size: 1.5rem;
+}
+.passcode input[type="password"] {
+    font-size: 1.5rem;
+}
+.passcode ul {
+    list-style: disc;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+.passcode h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.passcode li {
+    color: rgb(43, 153, 255);
+}
+.already-have {
+    color: floralwhite;
+    font-size: 1rem;
+}
+.already-have a {
+    color: orangered;
+    text-decoration: underline rgb(255, 68, 0);
+    display: inline;
+}
