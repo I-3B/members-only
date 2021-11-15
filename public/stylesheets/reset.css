@@ -147,8 +147,12 @@ a {
     gap: 1rem;
 }
 .header-nav a {
+    color: rgb(43, 43, 43);
     padding-right: 1rem;
-    border-right: 3px solid floralwhite;
+    border-right: 3px solid rgb(43, 43, 43);
+}
+.header-nav span {
+    color: rgb(43, 43, 43);
 }
 .header-nav span a {
     display: inline;
