@@ -4,7 +4,7 @@ const passport = require("passport");
 const router = express.Router();
 const Message = require("../models/Message");
 const User = require("../models/User");
-const adminPrivileges = ["member's privileges", "can delete any message"];
+const adminPrivileges = ["member's privileges",     ];
 const memberPrivileges = [
     "can view all messages",
     "can view message's sender",

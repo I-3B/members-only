@@ -18,8 +18,8 @@ mongoose.connect(process.env.MONGO_DB, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 });
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "mongo connection error"));
+    const db = mongoose.connection;
+    db.on("error", console.error.bind(console, "mongo connection error"));
 
 const app = express();
 // view engine setup

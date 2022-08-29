@@ -4,7 +4,7 @@ block style
 block content
   form(action="/#{passcodeType}", method="POST").passcode
     label(for="passcode") enter #{passcodeType} passcode:
-    input(id="passcode",name="passcode",type="password",placeholder="******")
+    input(id="passcode",name="passcode",type="password",placeholder="****")
     h3 #{passcodeType} privileges:
     ul
       for priv in privileges
