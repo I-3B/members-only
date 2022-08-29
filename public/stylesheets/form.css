@@ -11,10 +11,12 @@ form {
 }
 h3 {
     font-size: 2.5rem;
+    color: #333;
 }
 
 label {
     margin-top: 1rem;
+    color: #333;
 }
 input {
     border: none;
@@ -25,7 +27,7 @@ input[type="submit"] {
     cursor: pointer;
     margin-top: 1rem;
     border: none;
-    color: floralwhite;
+    color: #333;
     background-color: #ffc500;
     border: 2px solid floralwhite;
     font-size: 2rem;
@@ -35,8 +37,8 @@ input[type="submit"] {
 input[type="submit"]:hover,
 input[type="submit"]:focus {
     border: 2px solid transparent;
-    color: #ffc500;
     background-color: floralwhite;
+    color: #333;
 }
 ul {
     list-style: disc;
@@ -63,7 +65,7 @@ p {
     color: rgb(43, 153, 255);
 }
 .already-have {
-    color: floralwhite;
+    color: #333;
     font-size: 1rem;
 }
 .already-have a {

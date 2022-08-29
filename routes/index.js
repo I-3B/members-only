@@ -4,7 +4,7 @@ const passport = require("passport");
 const router = express.Router();
 const Message = require("../models/Message");
 const User = require("../models/User");
-const adminPrivileges = ["member's privileges",     ];
+const adminPrivileges = ["member's privileges", "can delete any message"];
 const memberPrivileges = [
     "can view all messages",
     "can view message's sender",
@@ -82,7 +82,7 @@ router.post("/new", (req, res, next) => {
 router.get("/member", (req, res) => {
     if (req.user) {
         res.render("passcode", {
-            user: false,
+            user: req.user,
             title: "Become a member",
             passcodeType: "member",
             privileges: memberPrivileges,
@@ -99,7 +99,7 @@ router.post("/member", (req, res, next) => {
             });
         } else {
             res.render("passcode", {
-                user: false,
+                user: req.user,
                 title: "Become a member",
                 passcodeType: "member",
                 privileges: memberPrivileges,
@@ -111,7 +111,7 @@ router.post("/member", (req, res, next) => {
 router.get("/admin", (req, res) => {
     if (req.user) {
         res.render("passcode", {
-            user: false,
+            user: req.user,
             title: "Become an admin",
             passcodeType: "admin",
             privileges: adminPrivileges,
@@ -122,17 +122,13 @@ router.get("/admin", (req, res) => {
 router.post("/admin", (req, res, next) => {
     if (req.user) {
         if (req.body.passcode === process.env.ADMIN_PASSCODE) {
-            User.findByIdAndUpdate(
-                req.user._id,
-                { member: true, admin: true },
-                (err) => {
-                    if (err) next(err);
-                    res.redirect("/");
-                }
-            );
+            User.findByIdAndUpdate(req.user._id, { member: true, admin: true }, (err) => {
+                if (err) next(err);
+                res.redirect("/");
+            });
         } else {
             res.render("passcode", {
-                user: false,
+                user: req.user,
                 title: "Become an Admin",
                 passcodeType: "admin",
                 privileges: adminPrivileges,
